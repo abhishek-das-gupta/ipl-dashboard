@@ -49,8 +49,9 @@ public class Match {
         }
         this.team1 = firstInningsTeam;
         this.team2 = secondInningsTeam;
+        this.matchWinner = matchInput.getWinner();
         this.tossWinner = matchInput.getToss_winner();
-        this.tossDecision = matchInput.getToss_winner();
+        this.tossDecision = matchInput.getToss_decision();
         this.result = matchInput.getResult();
         this.resultMargin = matchInput.getResult_margin();
         this.umpire1 = matchInput.getUmpire1();
