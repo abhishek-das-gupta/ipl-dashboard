@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+/**
+ * Listener class that logs when batch jobs get successfully completed.
+ * */
+
 @Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
 
