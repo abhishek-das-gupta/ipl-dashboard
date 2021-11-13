@@ -2,17 +2,20 @@ package io.project.ipldashboard.model;
 
 import io.project.ipldashboard.data.MatchInput;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 /**
  * POJO for Match table residing in the embedded database.
  * */
 
+@Entity
 public class Match {
+    @Id
     private long id;
     private String city;
-    private LocalDateTime date;
+    private LocalDate date;
     private String playerOfMatch;
     private String venue;
     private String team1; // team1 always bats
@@ -31,25 +34,25 @@ public class Match {
     public Match(MatchInput matchInput) {
         this.id = Long.parseLong(matchInput.getId());
         this.city = matchInput.getCity();
-        this.date = LocalDateTime.parse(matchInput.getDate());
-        this.playerOfMatch = matchInput.getPlayerOfMatch();
+        this.date = LocalDate.parse(matchInput.getDate());
+        this.playerOfMatch = matchInput.getPlayer_of_match();
         this.venue = matchInput.getVenue();
         String firstInningsTeam, secondInningsTeam;
-        if (matchInput.getTossDecision().equalsIgnoreCase("bat")) {
-            firstInningsTeam = matchInput.getTossWinner();
+        if (matchInput.getToss_decision().equalsIgnoreCase("bat")) {
+            firstInningsTeam = matchInput.getToss_winner();
             secondInningsTeam = matchInput.getTeam1().equalsIgnoreCase(firstInningsTeam) ?
                     matchInput.getTeam2() : matchInput.getTeam1();
         } else {
-            secondInningsTeam = matchInput.getTossWinner();
+            secondInningsTeam = matchInput.getToss_winner();
             firstInningsTeam = matchInput.getTeam1().equalsIgnoreCase(secondInningsTeam) ?
                     matchInput.getTeam2() : matchInput.getTeam1();
         }
         this.team1 = firstInningsTeam;
         this.team2 = secondInningsTeam;
-        this.tossWinner = matchInput.getTossWinner();
-        this.tossDecision = matchInput.getTossWinner();
+        this.tossWinner = matchInput.getToss_winner();
+        this.tossDecision = matchInput.getToss_winner();
         this.result = matchInput.getResult();
-        this.resultMargin = matchInput.getResultMargin();
+        this.resultMargin = matchInput.getResult_margin();
         this.umpire1 = matchInput.getUmpire1();
         this.umpire2 = matchInput.getUmpire2();
     }
@@ -70,11 +73,11 @@ public class Match {
         this.city = city;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

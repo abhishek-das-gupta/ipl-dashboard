@@ -4,16 +4,16 @@ public class MatchInput {
     private String id;
     private String city;
     private String date;
-    private String playerOfMatch;
+    private String player_of_match;
     private String venue;
-    private String neutralVenue;
+    private String neutral_venue;
     private String team1;
     private String team2;
-    private String tossWinner;
-    private String tossDecision;
+    private String toss_winner;
+    private String toss_decision;
     private String winner;
     private String result;
-    private String resultMargin;
+    private String result_margin;
     private String eliminator;
     private String method;
     private String umpire1;
@@ -43,12 +43,12 @@ public class MatchInput {
         this.date = date;
     }
 
-    public String getPlayerOfMatch() {
-        return playerOfMatch;
+    public String getPlayer_of_match() {
+        return player_of_match;
     }
 
-    public void setPlayerOfMatch(String playerOfMatch) {
-        this.playerOfMatch = playerOfMatch;
+    public void setPlayer_of_match(String player_of_match) {
+        this.player_of_match = player_of_match;
     }
 
     public String getVenue() {
@@ -59,12 +59,12 @@ public class MatchInput {
         this.venue = venue;
     }
 
-    public String getNeutralVenue() {
-        return neutralVenue;
+    public String getNeutral_venue() {
+        return neutral_venue;
     }
 
-    public void setNeutralVenue(String neutralVenue) {
-        this.neutralVenue = neutralVenue;
+    public void setNeutral_venue(String neutral_venue) {
+        this.neutral_venue = neutral_venue;
     }
 
     public String getTeam1() {
@@ -83,20 +83,20 @@ public class MatchInput {
         this.team2 = team2;
     }
 
-    public String getTossWinner() {
-        return tossWinner;
+    public String getToss_winner() {
+        return toss_winner;
     }
 
-    public void setTossWinner(String tossWinner) {
-        this.tossWinner = tossWinner;
+    public void setToss_winner(String toss_winner) {
+        this.toss_winner = toss_winner;
     }
 
-    public String getTossDecision() {
-        return tossDecision;
+    public String getToss_decision() {
+        return toss_decision;
     }
 
-    public void setTossDecision(String tossDecision) {
-        this.tossDecision = tossDecision;
+    public void setToss_decision(String toss_decision) {
+        this.toss_decision = toss_decision;
     }
 
     public String getWinner() {
@@ -115,12 +115,12 @@ public class MatchInput {
         this.result = result;
     }
 
-    public String getResultMargin() {
-        return resultMargin;
+    public String getResult_margin() {
+        return result_margin;
     }
 
-    public void setResultMargin(String resultMargin) {
-        this.resultMargin = resultMargin;
+    public void setResult_margin(String result_margin) {
+        this.result_margin = result_margin;
     }
 
     public String getEliminator() {
