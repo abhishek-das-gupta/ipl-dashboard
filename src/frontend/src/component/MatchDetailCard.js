@@ -5,8 +5,11 @@ import './MatchDetailCard.scss';
 
 export const MatchDetailCard = ({teamName, match}) => {
   if (!match) return null;
+  // eslint-disable-next-line
   const otherTeam = teamName.toLowerCase() == match.team1.toLowerCase() ? match.team2 : match.team1;
   const otherTeamRoute = `/teams/${otherTeam}`;
+
+  // eslint-disable-next-line
   const isMatchWon = teamName === match.matchWinner;
 
   return (

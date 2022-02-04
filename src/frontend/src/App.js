@@ -1,5 +1,5 @@
 import './App.scss';
-import {BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { TeamPage } from './page/TeamPage';
 import { MatchPage } from './page/MatchPage';
 import { HomePage } from './page/HomePage';
